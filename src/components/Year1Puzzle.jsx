@@ -1,33 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import Puzzle from '../img/YearOnePuzzle|Chalice.jpg';
-import { Redirect } from 'react-router-dom';
-import CommonRoom from './CommonRoom';
+import PuzzleImg from '../img/YearOnePuzzle|Chalice.jpg';
+import { withRouter } from 'react-router-dom';
 
 
+class Year1Puzzle extends React.Component{
+  constructor(props) {
+    console.log("props", props);
+    super(props);
+    this.handlePotionSelectionSubmission = this.handlePotionSelectionSubmission.bind(this);
+  }
 
+  _potion = null;
 
-function Year1Puzzle(props){
-  let _potion = null;
-
-  function handlePotionSelectionSubmission(event) {
+  handlePotionSelectionSubmission(event) {
     event.preventDefault();
-    console.log(_potion.value);
-    
-    if (_potion.value === '-1') {
+    console.log(this._potion.value);
+
+    if (this._potion.value === '-1') {
       //real stuff someday
       alert("You died");
-    } else if (_potion.value === '0') {
+    } else if (this._potion.value === '0') {
       alert("That isn't it!")
-    } else if (_potion.value === '1') {
-      return <Redirect to='/commonroom'/>
+    } else if (this._potion.value === '1') {
+        this.props.history.push('/commonroom')
     }
   }
 
+render() {
   return (
     <div id="yearOnePuzzle">
-      <img src={Puzzle} alt="image of 7 different potion bottles on a table"/>
+      <img src={PuzzleImg} alt="image of 7 different potion bottles on a table"/>
       <h3>
         Danger lies before you, while safety lies behind, <br/>
         Two of us will help you, whichever you would find, <br/>
@@ -47,9 +51,9 @@ function Year1Puzzle(props){
         Are twins once you taste them, though different at first sight. <br/>
         <br/>
       </h3>
-      <form onSubmit={handlePotionSelectionSubmission} action="submit" id="potionGuess">
+      <form onSubmit={this.handlePotionSelectionSubmission} action="submit" id="potionGuess">
         <label>Which potion do you choose?</label>
-        <select ref={(input) => _potion = input}>
+        <select ref={(input) => this._potion = input}>
         <option value="-1">One</option>
         <option value="0">Two</option>
         <option value="1">Three</option>
@@ -65,7 +69,8 @@ function Year1Puzzle(props){
     </div>
   );
 }
+}
 
 
 
-export default Year1Puzzle;
+export default withRouter(Year1Puzzle);
