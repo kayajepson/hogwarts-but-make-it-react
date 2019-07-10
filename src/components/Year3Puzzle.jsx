@@ -7,7 +7,7 @@ function Year3Puzzle(props){
   return (
     <div id="welcome">
       <map name="image-map">
-        <area target="" alt="" title="" href="/commonroom" coords="252,257,281,276,323,287,314,298,275,290,247,274" shape="poly"/>
+        <area target="" alt="" title="" href="/congrats" coords="252,257,281,276,323,287,314,298,275,290,247,274" shape="poly"/>
       </map>
       <img src={Whomp} usemap="#image-map"></img>
         
