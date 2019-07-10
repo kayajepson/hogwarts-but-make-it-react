@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Error404 from './Error404';
+import { Switch, Route } from 'react-router-dom';
+import Welcome from './components/Welcome';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentYear: 1,
+      house: null
+    };
+    this.handleChangingToNewYear = this.handleChangingToNewYear.bind(this);
+    this.handleAssigningHouse = this.handleAssigningHouse.bind(this);
+  }
+
+  handleChangingToNewYear(){
+    var newCurrentYear = this.state.currentYear;
+    newCurrentYear++;
+    this.setState({currentYear: newCurrentYear});
+  }
+
+  handleAssigningHouse(){
+    var newHouse = this.state.house;
+    newHouse = "Hufflepuff";
+    this.setState({house: newHouse});
+  }
+
+  render(){
+    return (
+      <div>
+          <Switch>
+            <Route exact path='/' render={()=><Welcome currentYear={this.state.currentYear}/>} />
+          </Switch>
+      </div>
+    );
+  }
+
 }
 
 export default App;
+
