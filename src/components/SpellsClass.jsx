@@ -23,7 +23,7 @@ function SpellsClass(props){
     <div id="spells">
     <h5>Today you will be learning a newspell. </h5>
     <h6>To master this spell, you must click this button 15 times in 10 seconds.</h6>
-    <Expire until={10000}>
+    <Expire until={5000}>
       {(expired) => (
       expired ? <Link to="/puzzle"><button id="complete-class" onClick={assessClassPassed}>Complete class</button></Link> : <button id="spell-button" onClick={incrementCount}>Try spell</button>
       )}
