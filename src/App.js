@@ -5,6 +5,7 @@ import Welcome from './components/Welcome';
 import SortingHat from './components/SortingHat';
 import CommonRoom from './components/CommonRoom';
 import SpellsClass from './components/SpellsClass';
+import Puzzle from './components/Puzzle';
 
 class App extends React.Component {
 
@@ -46,6 +47,7 @@ class App extends React.Component {
             <Route  path='/sorting' render={()=><SortingHat onAssigningHouse={this.handleAssigningHouse}/>}/>
             <Route  path='/commonroom' render={()=><CommonRoom house={this.state.house}/>} />
             <Route  path='/class' render={()=><SpellsClass onPassingSpellsClass={this.handlePassingSpellsClass}/>} />
+            <Route path='/puzzle' render={()=><Puzzle currentYear={this.state.currentYear}/>} />
           </Switch>
       </div>
     );
