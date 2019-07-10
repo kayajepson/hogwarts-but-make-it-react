@@ -38,13 +38,13 @@ function Welcome(props){
         And don’t get in a flap! <br/>
         You’re in safe hands (though I have none) <br/>
         For I’m a Thinking Cap!</em> -Sorting Hat</h4>
-        <Link to='/commonroom'><button type="button" id="sortButton">What's my house?</button></Link>
+        <Link to='/commonroom'><button type="button" id="sortButton" onClick={props.onAssigningHouse}>What's my house?</button></Link>
     </div>
   );
 }
 
 Welcome.propTypes = {
-    currentYear: PropTypes.number
+    onAssigningHouse: PropTypes.func
 };
 
 export default Welcome;
