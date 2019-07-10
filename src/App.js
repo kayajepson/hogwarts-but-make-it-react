@@ -6,6 +6,7 @@ import SortingHat from './components/SortingHat';
 import CommonRoom from './components/CommonRoom';
 import SpellsClass from './components/SpellsClass';
 import Puzzle from './components/Puzzle';
+import Congrats from './components/Congrats';
 
 class App extends React.Component {
 
@@ -48,6 +49,7 @@ class App extends React.Component {
             <Route  path='/commonroom' render={()=><CommonRoom house={this.state.house}/>} />
             <Route  path='/class' render={()=><SpellsClass onPassingSpellsClass={this.handlePassingSpellsClass}/>} />
             <Route path='/puzzle' render={()=><Puzzle currentYear={this.state.currentYear}/>} />
+            <Route path='/congrats' render={()=><Congrats currentYear={this.state.currentYear}/>} />
           </Switch>
       </div>
     );

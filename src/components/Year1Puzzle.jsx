@@ -24,7 +24,7 @@ class Year1Puzzle extends React.Component{
     } else if (this._potion.value === '0') {
       alert("That isn't it!")
     } else if (this._potion.value === '1') {
-        this.props.history.push('/commonroom')
+        this.props.history.push('/congrats')
     }
   }
 
