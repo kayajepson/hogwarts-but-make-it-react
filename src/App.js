@@ -2,6 +2,8 @@ import React from 'react';
 // import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import Welcome from './components/Welcome';
+import SortingHat from './components/SortingHat';
+// import CommonRoom from './components/CommonRoom';
 
 class App extends React.Component {
 
@@ -32,6 +34,8 @@ class App extends React.Component {
       <div>
           <Switch>
             <Route exact path='/' render={()=><Welcome currentYear={this.state.currentYear}/>} />
+            <Route  path='/sorting' render={()=><SortingHouse onAssigningHouse={this.handleAssigningHouse}/>}/>
+            <Route  path='/commonroom' render={()=><CommonRoom house={this.state.house}/>} />
           </Switch>
       </div>
     );
