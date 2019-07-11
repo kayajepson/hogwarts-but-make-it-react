@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentYear: 7,
+      currentYear: 1,
       house: null,
       spellsPassed: 0,
     };
@@ -50,7 +50,7 @@ class App extends React.Component {
             <Route  path='/commonroom' render={()=><CommonRoom house={this.state.house}/>} />
             <Route  path='/class' render={()=><SpellsClass onPassingSpellsClass={this.handlePassingSpellsClass}/>} />
             <Route path='/puzzle' render={()=><Puzzle currentYear={this.state.currentYear}/>} />
-            <Route path='/congrats' render={()=><Congrats onChangingToNewYear={this.handleChangingToNewYear} currentYear={this.state.currentYear}/>} />
+            <Route path='/congrats' render={()=><Congrats onChangingToNewYear={this.handleChangingToNewYear} currentYear={this.state.currentYear} spellsPassed={this.state.spellsPassed}/> }/>
           </Switch>
       </div>
     );
