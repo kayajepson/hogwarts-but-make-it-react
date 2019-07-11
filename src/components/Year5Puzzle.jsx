@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-
+import PuzzleImg from '../img/YearFivePuzzle|Diadem.png'
 import Bird from '../img/bird.jpg';
 import Bunny from '../img/bunny.jpg';
 import Cat from '../img/cat.jpg';
@@ -49,7 +48,7 @@ class Year5Puzzle extends React.Component {
        (random % 3 === 0) ? <img src={Otter} alt="bird patronus"/>:
        (random % 2 === 0) ? <img src={Stag} alt="bird patronus"/>:
        <img src={Swan} alt="bird patronus"/>}
-       <Link to="/congrats"><button>You've mastered a very complex spell this year</button></Link>
+       <Link to="/congrats"><button>What a cool patronus!</button></Link>
        <style jsx>{`
          div#patronus-spell img {
            width: 88vw;
@@ -59,6 +58,7 @@ class Year5Puzzle extends React.Component {
     } else {
       currentlyVisible = <div id="patronus-intro">
         <h1>Professor Umbridge is taking over the school with her insane regulations. You and your classmates find an abandoned room to secretly practice defensive spells. Today you will learn how cast a patronus spell.</h1>
+        <img src={PuzzleImg} alt=""/>
         <button onClick={this.showPatronus}>Find out what your patronus is</button>
         </div>
     }

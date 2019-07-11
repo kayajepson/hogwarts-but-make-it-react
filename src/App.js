@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentYear: 5,
+      currentYear: 6,
       house: null,
       spellsPassed: 0,
     };
@@ -26,6 +26,7 @@ class App extends React.Component {
     var newCurrentYear = this.state.currentYear;
     newCurrentYear++;
     this.setState({currentYear: newCurrentYear});
+    console.log(this.state.currentYear);
   }
 
   handleAssigningHouse(){

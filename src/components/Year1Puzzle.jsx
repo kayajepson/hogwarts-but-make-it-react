@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
 import PuzzleImg from '../img/YearOnePuzzle|Chalice.jpg';
 import { withRouter } from 'react-router-dom';
 
@@ -31,7 +29,7 @@ class Year1Puzzle extends React.Component{
   render() {
     return (
       <div id="yearOnePuzzle">
-        <img src={PuzzleImg} alt="image of 7 different potion bottles on a table"/>
+        <img src={PuzzleImg} alt="7 different potion bottles on a table"/>
         <h3>
           Danger lies before you, while safety lies behind, <br/>
           Two of us will help you, whichever you would find, <br/>
