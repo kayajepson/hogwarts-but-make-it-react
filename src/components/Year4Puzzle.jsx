@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import { tsConstructorType } from '@babel/types';
 
 function Year4Puzzle(props){
   return (
     <div id="welcome">
-        <h3>This would be the year 4 puzzle</h3>
-        
+      <p>maze stuff goes here eventually</p>
+      <Link to='/congrats'><button>Click to continue for now..</button></Link>
     </div>
   );
 }
