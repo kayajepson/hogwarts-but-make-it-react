@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
 import Background from '../img/YearSixPuzzle|Diary.jpg';
 import GameControl from './GameControl';
 
@@ -21,8 +19,5 @@ function Year6Puzzle(props){
     </div>
   );
 }
-
-Year6Puzzle.propTypes = {
-};
 
 export default Year6Puzzle;

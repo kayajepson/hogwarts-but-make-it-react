@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentYear: 6,
+      currentYear: 7,
       house: null,
       spellsPassed: 0,
     };
