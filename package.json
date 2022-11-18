@@ -8,8 +8,8 @@
     "react-dom": "^16.8.6",
     "react-expire": "^1.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "styled-jsx": "^3.2.1",
+    "react-scripts": "5.0.1",
+    "styled-jsx": "^5.1.0",
     "yarn": "^1.16.0"
   },
   "scripts": {
